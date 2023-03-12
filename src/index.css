@@ -153,4 +153,15 @@ body {
   background-color: #f3f6f9;
 }
 
+.front-page-search-block {
+  display: flex;
+  align-items: center;
+  min-height: 378px;
+  padding: 20px;
+  background-color: transparent;
+  background-image: url(/src/images/shutterstock_42474535.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
