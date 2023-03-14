@@ -1,7 +1,8 @@
 import NavBar from "./Components/NavBar/NavBar";
-import Hero from './Components/Hero/Hero'
+import Hero from "./Components/Hero/Hero";
 
-import "./App.css";
+// styles //
+import "./styles/global-styles.css";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";

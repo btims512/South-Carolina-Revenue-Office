@@ -51,13 +51,20 @@ const MenuIcon = ({ isOpen }) => (
   </div>
 );
 
-export default function App() {
+export default function NavBar() {
   const [showNavExternal, setShowNavExternal] = useState(false);
 
   return (
     <>
       <MDBNavbar>
-        <MDBContainer fluid className="justify-start align-start">
+        <MDBContainer
+          fluid
+          className=""
+          style={{ justifyContent: "flex-start" }}
+        >
+        <div>
+          
+        </div>
           <MDBNavbarToggler
             type="button"
             data-target="#navbarToggleExternalContent"
@@ -74,21 +81,29 @@ export default function App() {
               </span>
             </div>
           </MDBNavbarToggler>
-          <div id="navbar-info" className="navbar-text gap-3 pr-[15px]">
+          <div className="title-logo">
+          <div id="navbar-info" className="navbar-text gap-3 ml-5 pr-[15px]">
             <div>
               <a href="/">
-                <img className="w-[75px]" src={logo} alt="logo" />
+                <img className="w-[78px]" src={logo} alt="logo" />
               </a>
             </div>
             <div>
               <div className="text-[18px] text-[#1b3a61] text-left font-bold">
                 SOUTH CAROLINA <br /> REVENUE AND FISCAL AFFAIRS OFFICE
               </div>
-              <div className="text-[16px] text-left">
+              <div className="text-[16px] text-left italic">
                 Transforming data into solutions for South Carolina
               </div>
             </div>
           </div>
+          </div>
+        </MDBContainer>
+        <MDBContainer className="mag-glass" style={{ 
+          width: 'fit-content',
+          marginLeft: '-65px',
+          marginTop: '15px'
+        }}>
           <div className="icon-container mr-4">
             <HiMagnifyingGlass
               size={24}
@@ -101,8 +116,10 @@ export default function App() {
 
       <MDBCollapse show={showNavExternal} className="">
         <div className="flex w-36">
-          <div className="left-menu bg-light shadow-3 p-4 flex flex-col ">
-            <MDBBtn block className="border-bottom m-0" color="link">
+
+        {/* left */}
+          <div className="left-menu shadow-3 py-7 flex flex-col w-235">
+            <MDBBtn block className="border-bottom m-0 " color="link">
               Home
             </MDBBtn>
             <MDBBtn block className="border-bottom m-0" color="link">
@@ -115,15 +132,89 @@ export default function App() {
               Boards & Committees
             </MDBBtn>
           </div>
+
+          {/* right */}
           <div className="right-menu bg-light shadow-3 p-4 flex flex-col">
             <MDBBtn block className="border-bottom m-0" color="link">
-              Link 1
+              DATA & RESEARCH
+              <br />
+              <br />
+              <ul>
+                <li>
+                  Education
+                </li>
+                <li>
+                  Healthcare
+                </li>
+                <li>
+                  Local Government
+                </li>
+                <li>
+                  Population & Demographics
+                </li>
+                <li>
+                  Presentations
+                </li>
+                <li>
+                  State Finances and Economy
+                </li>
+                <li>
+                  Inflation Adjustments for Legal Proceedings
+                </li>
+              </ul>
             </MDBBtn>
             <MDBBtn block className="border-bottom m-0" color="link">
-              Link 2
+            GEOGRAPHY & MAPPING
+              <br />
+              <br />
+              <ul>
+                <li>
+                Analytic Mapping Services
+                </li>
+                <li>
+                County Boundary Program
+                </li>
+                <li>
+                Jurisdictional Mapping
+                </li>
+                <li>
+                NC/SC Boundary
+                </li>
+                <li>
+                SC Real Time Network (RTN)
+                </li>
+                <li>
+                Statewide Aerial Imagery
+                </li>
+                <li>
+                Transportation Network Carrier Maps
+                </li>
+                <li>
+                LocateMe
+                </li>
+              </ul>
             </MDBBtn>
             <MDBBtn block className="border-bottom m-0" color="link">
-              Link 2
+            GEOGRAPHY & MAPPING
+              <br />
+              <br />
+              <ul>
+                <li>
+                Data Services & Online Solutions
+                </li>
+                <li>
+                Fiscal Analysis
+                </li>
+                <li>
+                Geodetic Survey
+                </li>
+                <li>
+                Precinct Demographics & Redistricting
+                </li>
+                <li>
+                State 9-1-1 Program
+                </li>
+              </ul>
             </MDBBtn>
           </div>
         </div>

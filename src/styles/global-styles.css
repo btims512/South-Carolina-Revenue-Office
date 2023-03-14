@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+:root {
+  --blue: #142b47;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #e9261d;
+  --orange: #fd7e14;
+  --yellow: #8c6910;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #666;
+  --gray-dark: #333;
+  --primary: #0074c1;
+  --secondary: #8c6910;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #f1c21b;
+  --danger: #da1e28;
+  --light: #f3f6f9;
+  --dark: #333;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1260px;
+  --font-family-sans-serif: "Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin: 0;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.25;
+  font-family: open;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+h4 {
+  font-size: 28px;
+  line-height: 1.5;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+body {
+  margin: 0;
+  font-family: Open Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.375;
+  color: #333;
+  text-align: left;
+  background-color: #fff;
+}
+
+/* Buttons */
+
+/* STROKE BUTTON */
+.stroke-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #000;
+  color: #000;
+  border-radius: 0;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.stroke-button:hover,
+.stroke-button:focus {
+  background-color: #000;
+  color: #fff;
+}
+
+.stroke-button:active {
+  background-color: #000;
+  color: #fff;
+  transform: translateY(1px);
+}
+
+/* SOLID BUTTON */
+.solid-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  color: #fff;
+  border-radius: 0;
+  background-color: #000;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.solid-button:hover,
+.solid-button:focus {
+  background-color: #333;
+}
+
+.solid-button:active {
+  background-color: #444;
+  transform: translateY(1px);
+}
+
+/* SOLID BUTTON / ICON */
+.solid-button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  color: #fff;
+  border-radius: 0;
+  background-color: #000;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.solid-button-icon:hover,
+.solid-button-icon:focus {
+  background-color: #333;
+}
+
+.solid-button-icon:active {
+  background-color: #444;
+  transform: translateY(1px);
+}
+
+.solid-button-icon .icon {
+  margin-right: 0.5rem;
+  align-self: center;
+
+}
+
+/* DEFAULT BUTTONS */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  color: #fff;
+  border-radius: 0;
+  background-color: #000;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #333;
+}
+
+.button:active {
+  background-color: #444;
+  transform: translateY(1px);
+}
+
+/* SEARCH Q */
+.search-q {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #000;
+  color: #000;
+  border-radius: 0;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.search-q:hover,
+.search-q:focus {
+  background-color: #000;
+  color: #fff;
+}
+
