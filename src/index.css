@@ -185,6 +185,16 @@ p {
   margin: 0 0 1rem 0;
 }
 
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
 
 body {
   margin: 0;
@@ -246,6 +256,22 @@ body {
   flex-direction: row;
   align-items: center;
   
+}
+
+.menu-span {
+  color: #1b3a61;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .75px;
+}
+
+.menu-span::after {
+  display: block;
+  width: 50px;
+  height: 3px;
+  margin-top: 8px;
+  content: "";
+  background-color: #8c6910;
 }
 
 .icon-container {
@@ -310,6 +336,8 @@ body {
 .btn.btn-block {
   margin: inherit;
   width: 235px;
+  color: #333;
+  opacity: 1;
 }
 
 .menu-open {
@@ -318,6 +346,14 @@ body {
 
 .right-menu {
   flex-direction: row;
+  background-color: #fff;
+}
+
+.left {
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
 }
 
 

@@ -79,6 +79,24 @@ p {
   margin: 0 0 1rem 0;
 }
 
+li a {
+  color: #333;
+  display: block;
+  margin-bottom: 0;
+  padding: .35rem;
+  text-decoration: none;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #333;
+  /* font-weight: 400; */
+  font-family: 'Open Sans';
+}
+
+li a:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
 body {
   margin: 0;
   font-family: Open Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;

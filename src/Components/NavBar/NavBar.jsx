@@ -53,6 +53,7 @@ const MenuIcon = ({ isOpen }) => (
 
 export default function NavBar() {
   const [showNavExternal, setShowNavExternal] = useState(false);
+  const isDisabled = true;
 
   return (
     <>
@@ -114,111 +115,91 @@ export default function NavBar() {
         </MDBContainer>
       </MDBNavbar>
 
-      <MDBCollapse show={showNavExternal} className="">
-        <div className="flex w-36">
-
-        {/* left */}
-          <div className="left-menu shadow-3 py-7 flex flex-col w-235">
-            <MDBBtn block className="border-bottom m-0 " color="link">
-              Home
-            </MDBBtn>
-            <MDBBtn block className="border-bottom m-0" color="link">
-              About Us
-            </MDBBtn>
-            <MDBBtn block className="border-bottom m-0" color="link">
-              Events
-            </MDBBtn>
-            <MDBBtn block className="border-bottom m-0" color="link">
-              Boards & Committees
-            </MDBBtn>
-          </div>
-
-          {/* right */}
-          <div className="right-menu bg-light shadow-3 p-4 flex flex-col">
-            <MDBBtn block className="border-bottom m-0" color="link">
-              DATA & RESEARCH
-              <br />
-              <br />
-              <ul>
-                <li>
-                  Education
-                </li>
-                <li>
-                  Healthcare
-                </li>
-                <li>
-                  Local Government
-                </li>
-                <li>
-                  Population & Demographics
-                </li>
-                <li>
-                  Presentations
-                </li>
-                <li>
-                  State Finances and Economy
-                </li>
-                <li>
-                  Inflation Adjustments for Legal Proceedings
-                </li>
-              </ul>
-            </MDBBtn>
-            <MDBBtn block className="border-bottom m-0" color="link">
-            GEOGRAPHY & MAPPING
-              <br />
-              <br />
-              <ul>
-                <li>
-                Analytic Mapping Services
-                </li>
-                <li>
-                County Boundary Program
-                </li>
-                <li>
-                Jurisdictional Mapping
-                </li>
-                <li>
-                NC/SC Boundary
-                </li>
-                <li>
-                SC Real Time Network (RTN)
-                </li>
-                <li>
-                Statewide Aerial Imagery
-                </li>
-                <li>
-                Transportation Network Carrier Maps
-                </li>
-                <li>
-                LocateMe
-                </li>
-              </ul>
-            </MDBBtn>
-            <MDBBtn block className="border-bottom m-0" color="link">
-            GEOGRAPHY & MAPPING
-              <br />
-              <br />
-              <ul>
-                <li>
-                Data Services & Online Solutions
-                </li>
-                <li>
-                Fiscal Analysis
-                </li>
-                <li>
-                Geodetic Survey
-                </li>
-                <li>
-                Precinct Demographics & Redistricting
-                </li>
-                <li>
-                State 9-1-1 Program
-                </li>
-              </ul>
-            </MDBBtn>
-          </div>
+      <MDBCollapse show={showNavExternal} className="" style={{ maxWidth: "90vw" }}>
+  <div className="flex w-36">
+    {/* left */}
+    <div className="left-menu shadow-3 py-7 flex flex-col w-235">
+      <MDBBtn disabled={isDisabled} block className="border-bottom left m-0" color="link">
+        Home
+      </MDBBtn>
+      <MDBBtn disabled={isDisabled} block className="border-bottom left m-0" color="link">
+        About Us
+      </MDBBtn>
+      <MDBBtn disabled={isDisabled} block className="border-bottom m-0" color="link">
+        Events
+      </MDBBtn>
+      <MDBBtn disabled={isDisabled} block className="border-bottom m-0" color="link">
+        Boards & Committees
+      </MDBBtn>
+    </div>
+    {/* right */}
+    <div className="flex">
+    <div className="right-menu p-4 flex flex-col">
+    <div className="flex">
+      <div className="border-bottom m-0 w-[236px]">
+        <div>
+          <span className="menu-span">DATA &amp; RESEARCH</span>
         </div>
-      </MDBCollapse>
+        <ul className="mt-2 pl-0">
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Healthcare</a></li>
+          <li><a href="#">Local Government</a></li>
+          <li><a href="#">Population &amp; Demographics</a></li>
+          <li><a href="#">Presentations</a></li>
+          <li><a href="#">State Finances and Economy</a></li>
+          <li><a href="#">Inflation Adjustments for Legal Proceedings</a></li>
+        </ul>
+      </div>
+    </div>
+    <div className="flex">
+      <div className="border-bottom m-0 w-[236px]">
+        <div>
+          <span className="menu-span">GEOGRAPHY &amp; MAPPING</span>
+        </div>
+        <ul className="mt-2 pl-0">
+          <li><a href="#">Analytic Mapping Services</a></li>
+          <li><a href="#">County Boundary Program</a></li>
+          <li><a href="#">Jurisdictional Mapping</a></li>
+          <li><a href="#">NC/SC Boundary</a></li>
+          <li><a href="#">SC Real Time Network (RTN)</a></li>
+          <li><a href="#">Statewide Aerial Imagery</a></li>
+          <li><a href="#">Transportation Network Carrier Maps</a></li>
+          <li><a href="#">LocateMe</a></li>
+        </ul>
+      </div>
+    </div>
+    <div className="flex">
+    <div className="border-bottom m-0 w-[236px]">
+        <div>
+          <span className="menu-span">PROGRAMS & SERVICES</span>
+        </div>
+        <ul className="mt-2 pl-0">
+          <li><a href="#">Data Services &amp; Online Solutions</a></li>
+          <li><a href="#">Fiscal Analysis</a></li>
+          <li><a href="#">Geodetic Survey</a></li>
+          <li><a href="#">Precinct Demographics &amp; Redistricting</a></li>
+          <li><a href="#">State 9-1-1 Program</a></li>
+        </ul>
+      </div>
+    </div>
+    <div className="flex">
+    <div className="border-bottom m-0 w-[236px]">
+        <div>
+          <span className="menu-span">LEGISLATIVE FISCAL IMPACTS</span>
+        </div>
+        <ul className="mt-2 pl-0">
+          <li><a href="#">Current General Assembly Session</a></li>
+          <li><a href="#">Previous General Assembly Session</a></li>
+          <li><a href="#">Forms</a></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</MDBCollapse>
+
+
     </>
   );
 }
