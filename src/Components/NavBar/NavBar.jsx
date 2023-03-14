@@ -51,6 +51,7 @@ const MenuIcon = ({ isOpen }) => (
   </div>
 );
 
+
 export default function NavBar() {
   const [showNavExternal, setShowNavExternal] = useState(false);
   const isDisabled = true;
@@ -60,8 +61,8 @@ export default function NavBar() {
       <MDBNavbar>
         <MDBContainer
           fluid
-          className=""
-          style={{ justifyContent: "flex-start" }}
+          className="MDBcontainer hidden "
+          style={{ justifyContent: "flex-start", marginTop: "-7px" }}
         >
         <div>
           
@@ -73,7 +74,7 @@ export default function NavBar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
             onClick={() => setShowNavExternal(!showNavExternal)}
-            className="bg-[#2f68ad]"
+            className="h-[50px] mb-[-5px] sm:h-[95px] bg-[#2f68ad]"
           >
             <div id="menu-button" className="flex flex-col items-center">
               <MenuIcon isOpen={showNavExternal} />
@@ -86,35 +87,39 @@ export default function NavBar() {
           <div id="navbar-info" className="navbar-text gap-3 ml-5 pr-[15px]">
             <div>
               <a href="/">
-                <img className="w-[78px]" src={logo} alt="logo" />
+                <img className="w-[40px] sm:w-[78px]" src={logo} alt="logo" />
               </a>
             </div>
-            <div>
-              <div className="text-[18px] text-[#1b3a61] text-left font-bold">
+            <div className="">
+              <div className="text-[9px] sm:text-[18px] text-[#1b3a61] text-left font-bold">
                 SOUTH CAROLINA <br /> REVENUE AND FISCAL AFFAIRS OFFICE
               </div>
-              <div className="text-[16px] text-left italic">
+              <div className="text-[8px] sm:text-[16px] text-left italic">
                 Transforming data into solutions for South Carolina
               </div>
             </div>
+          {/* <div className="flex">
+            <ul className="flex"> 
+              <li>About Us</li>
+              <li>Events</li>
+              <li>Boards & Committees</li>
+            </ul>
+            </div> */}
           </div>
           </div>
         </MDBContainer>
-        <MDBContainer className="mag-glass" style={{ 
-          width: 'fit-content',
-          marginLeft: '-65px',
-          marginTop: '15px'
-        }}>
-          <div className="icon-container mr-4">
-            <HiMagnifyingGlass
-              size={24}
-              strokeWidth={2}
-              className="custom-icon"
-            />
-          </div>
-        </MDBContainer>
+        <div className="w-fit-content hidden sm:ml-[-90px] sm:mt-[15px] sm:block">
+        <MDBContainer>
+  <div className="icon-container mr-4">
+    <HiMagnifyingGlass
+      size={24}
+      strokeWidth={2}
+      className="custom-icon"
+    />
+  </div>
+</MDBContainer>
+        </div>
       </MDBNavbar>
-
       <MDBCollapse show={showNavExternal} className="" style={{ maxWidth: "90vw" }}>
   <div className="flex w-36">
     {/* left */}
@@ -197,9 +202,9 @@ export default function NavBar() {
     </div>
     </div>
   </div>
+  <div className="border">
+    </div>
 </MDBCollapse>
-
-
     </>
   );
 }

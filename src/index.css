@@ -213,9 +213,20 @@ body {
 
 .navbar {
   font-weight: 300;
-  height: 100px;
+  height: 94px;
   display: flex;
   flex-direction: column;
+}
+
+.MDBcontainer {
+  /* justify-content: flex-start; */
+  /* display: none; */
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    height: 50px;
+  }
 }
 
 /* these is used to override the default display property that comes with MDB */
@@ -238,8 +249,6 @@ body {
   border-radius: 0;
   margin-top: -8.5px;
   width: 60px;
-  height: 100px;
-
 }
 
 .menu-icon {
@@ -255,8 +264,16 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  
 }
+
+@media (max-width: 640px) {
+  #navbar-info {
+    margin-left: 10px;
+    margin-top: -5px;
+  }
+}
+
+
 
 .menu-span {
   color: #1b3a61;
@@ -286,6 +303,12 @@ body {
 
 #search {
   width: 400px;
+}
+
+@media (max-width: 640px) {
+  #search {
+    width: 300px;
+  }
 }
 
 .search-block {
@@ -354,6 +377,21 @@ body {
   text-decoration: none;
   text-align: center;
   font-weight: 700;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #1b3a61;
+  border: 2px solid transparent;
+  background: #fff;
+  box-shadow: 0 1px 4px 0 #c3c3c3;
+}
+
+.cards:hover {
+  border-color: #005d9b;
 }
 
 

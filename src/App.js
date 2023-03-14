@@ -1,5 +1,7 @@
 import NavBar from "./Components/NavBar/NavBar";
 import Hero from "./Components/Hero/Hero";
+import Cards from "./Components/Cards/Cards";
+import Divider from './Components/Divider/Divider'
 
 // styles //
 import "./styles/global-styles.css";
@@ -13,7 +15,9 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      <Divider />
       <Hero />
+      <Cards />
     </div>
   );
 }
