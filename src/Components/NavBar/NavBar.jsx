@@ -6,6 +6,7 @@ import {
   MDBNavbarToggler,
   MDBBtn,
 } from "mdb-react-ui-kit";
+import NavBarMobile from './NavBarMobile'
 import logo from "../../images/logo.png";
 
 import { HiMagnifyingGlass } from "react-icons/hi2";
@@ -62,7 +63,7 @@ export default function NavBar() {
         <MDBContainer
           fluid
           className="MDBcontainer hidden "
-          style={{ justifyContent: "flex-start", marginTop: "-7px" }}
+          style={{ justifyContent: "flex-start", marginTop: "-10px" }}
         >
         <div>
           
@@ -74,7 +75,7 @@ export default function NavBar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
             onClick={() => setShowNavExternal(!showNavExternal)}
-            className="h-[50px] mb-[-5px] sm:h-[95px] bg-[#2f68ad]"
+            className="h-[50px] mb-[-5px] md:h-[95px] bg-[#2f68ad]"
           >
             <div id="menu-button" className="flex flex-col items-center">
               <MenuIcon isOpen={showNavExternal} />
@@ -87,14 +88,14 @@ export default function NavBar() {
           <div id="navbar-info" className="navbar-text gap-3 ml-5 pr-[15px]">
             <div>
               <a href="/">
-                <img className="w-[40px] sm:w-[78px]" src={logo} alt="logo" />
+                <img className="w-[40px] md:w-[78px]" src={logo} alt="logo" />
               </a>
             </div>
             <div className="">
-              <div className="text-[9px] sm:text-[18px] text-[#1b3a61] text-left font-bold">
+              <div className="text-[9px] md:text-[18px] text-[#1b3a61] text-left font-bold">
                 SOUTH CAROLINA <br /> REVENUE AND FISCAL AFFAIRS OFFICE
               </div>
-              <div className="text-[8px] sm:text-[16px] text-left italic">
+              <div className="text-[8px] md:text-[16px] text-left italic">
                 Transforming data into solutions for South Carolina
               </div>
             </div>
@@ -108,7 +109,7 @@ export default function NavBar() {
           </div>
           </div>
         </MDBContainer>
-        <div className="w-fit-content hidden sm:ml-[-90px] sm:mt-[15px] sm:block">
+        <div className="w-fit-content hidden md:ml-[-90px] md:mt-[15px] md:block">
         <MDBContainer>
   <div className="icon-container mr-4">
     <HiMagnifyingGlass
@@ -121,7 +122,7 @@ export default function NavBar() {
         </div>
       </MDBNavbar>
       <MDBCollapse show={showNavExternal} className="">
-      <div className="flex">
+      <div className="flex desktop-menu">
 
     {/* left */}
     <div className="menu bg-[#f3f6f9] px-15">
@@ -141,10 +142,8 @@ export default function NavBar() {
     </ul>
     </div>
     {/* right */}
-    
     <div className="flex-row bg-white right-menu p-4">
     <div className="flex flex-wrap">
-    
     <div className="flex ">
       <div className="m-0 w-[236px]">
         <div>
@@ -204,9 +203,12 @@ export default function NavBar() {
         </ul>
       </div>
     </div>
+    </div>
+    </div>
+      </div>
 
-    </div>
-    </div>
+      <div className="lg:hidden">
+      <NavBarMobile />
       </div>
 
 

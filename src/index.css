@@ -213,19 +213,14 @@ body {
 
 .navbar {
   font-weight: 300;
-  height: 94px;
+  height: 90px;
   display: flex;
   flex-direction: column;
 }
 
-.MDBcontainer {
-  /* justify-content: flex-start; */
-  /* display: none; */
-}
-
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .navbar {
-    height: 50px;
+    height: 49px;
   }
 }
 
@@ -282,6 +277,14 @@ body {
   letter-spacing: .75px;
 }
 
+
+.menu-span-mobile {
+  color: #1b3a61;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .75px;
+}
+
 .menu-span::after {
   display: block;
   width: 50px;
@@ -304,6 +307,12 @@ body {
 @media (max-width: 640px) {
   #search {
     width: 300px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .desktop-menu {
+    display: none;
   }
 }
 
