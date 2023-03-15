@@ -120,28 +120,33 @@ export default function NavBar() {
 </MDBContainer>
         </div>
       </MDBNavbar>
-      <MDBCollapse show={showNavExternal} className="" style={{ maxWidth: "90vw" }}>
-  <div className="flex w-36">
+      <MDBCollapse show={showNavExternal} className="">
+      <div className="flex">
+
     {/* left */}
-    <div className="left-menu shadow-3 py-7 flex flex-col w-235">
-      <MDBBtn disabled={isDisabled} block className="border-bottom left m-0" color="link">
-        Home
-      </MDBBtn>
-      <MDBBtn disabled={isDisabled} block className="border-bottom left m-0" color="link">
-        About Us
-      </MDBBtn>
-      <MDBBtn disabled={isDisabled} block className="border-bottom m-0" color="link">
-        Events
-      </MDBBtn>
-      <MDBBtn disabled={isDisabled} block className="border-bottom m-0" color="link">
-        Boards & Committees
-      </MDBBtn>
+    <div className="menu bg-[#f3f6f9] px-15">
+    <ul className="left-menu shadow-3 py-7 flex flex-col w-200 p-30 md:p-[40px] h-[260px] justify-between">
+      <div className="border-b border-solid border-gray-300 pb-3 left m-0 self-center" color="link">
+        <a className="text-[#333]" href="#">Home</a>
+      </div>
+      <div className="border-b border-solid border-gray-300 pb-3 left m-0 self-center" color="link">
+      <a className="text-[#333]" href="#">About Us</a>
+      </div>
+      <div className="border-b border-solid border-gray-300 pb-3 left m-0 self-center" color="link">
+      <a className="text-[#333]" href="#">Events</a>
+      </div>
+      <div className="left m-0 self-center" color="link">
+        <a className="text-[#333]" href="#">Boards & Committees</a>
+      </div>
+    </ul>
     </div>
     {/* right */}
-    <div className="flex">
-    <div className="right-menu p-4 flex flex-col">
-    <div className="flex">
-      <div className="border-bottom m-0 w-[236px]">
+    
+    <div className="flex-row bg-white right-menu p-4">
+    <div className="flex flex-wrap">
+    
+    <div className="flex ">
+      <div className="m-0 w-[236px]">
         <div>
           <span className="menu-span">DATA &amp; RESEARCH</span>
         </div>
@@ -157,7 +162,7 @@ export default function NavBar() {
       </div>
     </div>
     <div className="flex">
-      <div className="border-bottom m-0 w-[236px]">
+      <div className="m-0 w-[236px]">
         <div>
           <span className="menu-span">GEOGRAPHY &amp; MAPPING</span>
         </div>
@@ -174,7 +179,7 @@ export default function NavBar() {
       </div>
     </div>
     <div className="flex">
-    <div className="border-bottom m-0 w-[236px]">
+    <div className="m-0 w-[236px] ">
         <div>
           <span className="menu-span">PROGRAMS & SERVICES</span>
         </div>
@@ -188,7 +193,7 @@ export default function NavBar() {
       </div>
     </div>
     <div className="flex">
-    <div className="border-bottom m-0 w-[236px]">
+    <div className="m-0 w-[236px] ">
         <div>
           <span className="menu-span">LEGISLATIVE FISCAL IMPACTS</span>
         </div>
@@ -199,9 +204,14 @@ export default function NavBar() {
         </ul>
       </div>
     </div>
+
     </div>
     </div>
-  </div>
+      </div>
+
+
+
+
   <div className="border">
     </div>
 </MDBCollapse>

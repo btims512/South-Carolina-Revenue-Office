@@ -297,10 +297,6 @@ body {
     border-radius: 2px;
 }
 
-.left-menu {
-  background-color: #f3f6f9;
-}
-
 #search {
   width: 400px;
 }
@@ -365,11 +361,6 @@ body {
 
 .menu-open {
   height: 400px;
-}
-
-.right-menu {
-  flex-direction: row;
-  background-color: #fff;
 }
 
 .left {
