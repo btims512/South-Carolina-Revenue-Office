@@ -108,125 +108,140 @@ body {
   background-color: #fff;
 }
 
-/* Buttons */
+/* Stroke Button */
 
-/* STROKE BUTTON */
-.stroke-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
+.stroke-btn {
   font-size: 1rem;
   font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  border: 2px solid #000;
-  color: #000;
-  border-radius: 0;
+  padding: 0.75rem 1.5625rem;
+  border: 2px solid #1D3C4F;
+  border-radius: 0.25rem;
+  color: #1D3C4F;
+  transition: all 0.2s ease-in-out;
   background-color: transparent;
-  transition: all 0.2s ease-in-out;
+}
+
+.stroke-btn:hover {
+  background-color: #1D3C4F;
+  color: #FFFFFF;
   cursor: pointer;
 }
 
-.stroke-button:hover,
-.stroke-button:focus {
-  background-color: #000;
-  color: #fff;
+.stroke-btn:active {
+  background-color: #0F2435;
+  color: #FFFFFF;
 }
 
-.stroke-button:active {
-  background-color: #000;
-  color: #fff;
-  transform: translateY(1px);
+.stroke-btn:disabled {
+  background-color: transparent;
+  border-color: #A5B7C2;
+  color: #A5B7C2;
+  cursor: not-allowed;
 }
 
-/* SOLID BUTTON */
-.solid-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
+/* Solid Button */
+
+.solid-btn {
   font-size: 1rem;
   font-weight: 600;
-  text-align: center;
-  text-decoration: none;
+  padding: 0.75rem 1.5625rem;
   border: none;
-  color: #fff;
-  border-radius: 0;
-  background-color: #000;
+  border-radius: 0.25rem;
+  color: #FFFFFF;
   transition: all 0.2s ease-in-out;
+  background-color: #1D3C4F;
+}
+
+.solid-btn:hover {
+  background-color: #0F2435;
   cursor: pointer;
 }
 
-.solid-button:hover,
-.solid-button:focus {
-  background-color: #333;
+.solid-btn:active {
+  background-color: #0A1827;
 }
 
-.solid-button:active {
-  background-color: #444;
-  transform: translateY(1px);
+.solid-btn:disabled {
+  background-color: #A5B7C2;
+  cursor: not-allowed;
 }
 
-/* SOLID BUTTON / ICON */
-.solid-button-icon {
-  display: inline-flex;
+/* Solid Button / Icon */
+
+.solid-icon-btn {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5625rem;
+  border: none;
+  color: #FFFFFF;
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+  background-color: #0074c1;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  color: #fff;
-  border-radius: 0;
-  background-color: #000;
-  transition: all 0.2s ease-in-out;
+}
+
+.solid-icon-btn:hover {
+  background-color: #005d9b;
   cursor: pointer;
 }
 
-.solid-button-icon:hover,
-.solid-button-icon:focus {
-  background-color: #333;
+.solid-icon-btn:active {
+  background-color: #0A1827;
 }
 
-.solid-button-icon:active {
-  background-color: #444;
-  transform: translateY(1px);
+.solid-icon-btn:disabled {
+  background-color: #A5B7C2;
+  cursor: not-allowed;
 }
 
-.solid-button-icon .icon {
+.solid-icon-btn svg {
   margin-right: 0.5rem;
   align-self: center;
-
 }
 
-/* DEFAULT BUTTONS */
-.button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
+/* Pagination */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.pagination a {
   font-size: 1rem;
   font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  color: #fff;
-  border-radius: 0;
-  background-color: #000;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #1D3C4F;
+  border-radius: 0.25rem;
+  color: #1D3C4F;
   transition: all 0.2s ease-in-out;
-  cursor: pointer;
+  margin: 0 0.25rem;
+  text-decoration: none;
 }
 
-.submit-button {
-  display: block;
-  width: 100%;
+.pagination a:hover {
+  background-color: #1D3C4F;
+  color: #FFFFFF;
 }
 
-.button:hover,
-.button:focus {
-  background-color: #333;
+.pagination a.active {
+  background-color: #1D3C4F;
+  color: #FFFFFF;
+  cursor: default;
 }
 
-.button:active {
-  background-color: #444;
-  transform: translateY(1px);
+.pagination a.disabled {
+  background-color: transparent;
+  border-color: #A5B7C2;
+  color: #A5B7C2;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  /* font-size */
 }
 
 /* SEARCH Q */

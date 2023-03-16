@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="search-block">
         <div className="container">
           <div className="col-md-8 offset-md-2 text-center">
-            <h2 className="text-white text-[22px] sm:text-[28px] font-slab font-normal leading-[36px]">
+            <h2 className="text-white text-[22px] sm:text-[28px] font-slab font-normal leading-[36px] ">
               Providing insightful research, analysis, and resources to
               facilitate informed policy decisions and administration of
               services

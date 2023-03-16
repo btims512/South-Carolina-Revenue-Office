@@ -9,6 +9,9 @@ module.exports = {
       display: ["Oswald"],
       body: ['"Open Sans"'],
     },
+    // screens: {
+    //   xsm: "480px",
+    // },
   },
   plugins: [],
 };

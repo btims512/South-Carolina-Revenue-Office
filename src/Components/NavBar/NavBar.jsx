@@ -6,7 +6,7 @@ import {
   MDBNavbarToggler,
   MDBBtn,
 } from "mdb-react-ui-kit";
-import NavBarMobile from './NavBarMobile'
+import NavBarMobile from "./NavBarMobile";
 import logo from "../../images/logo.png";
 
 import { HiMagnifyingGlass } from "react-icons/hi2";
@@ -52,7 +52,6 @@ const MenuIcon = ({ isOpen }) => (
   </div>
 );
 
-
 export default function NavBar() {
   const [showNavExternal, setShowNavExternal] = useState(false);
   const isDisabled = true;
@@ -62,12 +61,10 @@ export default function NavBar() {
       <MDBNavbar>
         <MDBContainer
           fluid
-          className="MDBcontainer hidden "
-          style={{ justifyContent: "flex-start", marginTop: "-10px" }}
+          className="MDBcontainer hidden sm:mt-[-10px] mt-[-8px] "
+          style={{ justifyContent: "flex-start" }}
         >
-        <div>
-          
-        </div>
+          <div></div>
           <MDBNavbarToggler
             type="button"
             data-target="#navbarToggleExternalContent"
@@ -85,138 +82,235 @@ export default function NavBar() {
             </div>
           </MDBNavbarToggler>
           <div className="title-logo">
-          <div id="navbar-info" className="navbar-text gap-3 ml-5 pr-[15px]">
-            <div>
-              <a href="/">
-                <img className="w-[40px] md:w-[78px]" src={logo} alt="logo" />
-              </a>
-            </div>
-            <div className="">
-              <div className="text-[9px] md:text-[18px] text-[#1b3a61] text-left font-bold">
-                SOUTH CAROLINA <br /> REVENUE AND FISCAL AFFAIRS OFFICE
+            <div id="navbar-info" className="navbar-text gap-3 ml-5 pr-[15px]">
+              <div>
+                <a href="/">
+                  <img className="w-[40px] md:w-[78px]" src={logo} alt="logo" />
+                </a>
               </div>
-              <div className="text-[8px] md:text-[16px] text-left italic">
-                Transforming data into solutions for South Carolina
+              <div className="">
+                <div className="text-[9px] md:text-[18px] text-[#1b3a61] text-left font-bold">
+                  SOUTH CAROLINA <br /> REVENUE AND FISCAL AFFAIRS OFFICE
+                </div>
+                <div className="text-[8px] md:text-[16px] text-left italic">
+                  Transforming data into solutions for South Carolina
+                </div>
               </div>
-            </div>
-          {/* <div className="flex">
+              {/* <div className="flex">
             <ul className="flex"> 
               <li>About Us</li>
               <li>Events</li>
               <li>Boards & Committees</li>
             </ul>
             </div> */}
-          </div>
+            </div>
           </div>
         </MDBContainer>
         <div className="w-fit-content hidden md:ml-[-90px] md:mt-[15px] md:block">
-        <MDBContainer>
-  <div className="icon-container mr-4">
-    <HiMagnifyingGlass
-      size={24}
-      strokeWidth={2}
-      className="custom-icon"
-    />
-  </div>
-</MDBContainer>
+          {/* <MDBContainer>
+            <div className="p-[.75rem] lg:border-[1px] border-solid border-[#3068ad] rounded-sm  mr-4">
+              <HiMagnifyingGlass
+                size={24}
+                strokeWidth={2}
+                className="custom-icon"
+              />
+            </div>
+          </MDBContainer> */}
+          <SearchBox />
         </div>
       </MDBNavbar>
       <MDBCollapse show={showNavExternal} className="">
-      <div className="flex desktop-menu">
-
-    {/* left */}
-    <div className="menu bg-[#f3f6f9] px-15">
-    <ul className="left-menu shadow-3 py-7 flex flex-col w-200 p-30 md:p-[40px] h-[260px] justify-between">
-      <div className="border-b border-solid border-gray-300 pb-3 left m-0 self-center" color="link">
-        <a className="text-[#333]" href="#">Home</a>
-      </div>
-      <div className="border-b border-solid border-gray-300 pb-3 left m-0 self-center" color="link">
-      <a className="text-[#333]" href="#">About Us</a>
-      </div>
-      <div className="border-b border-solid border-gray-300 pb-3 left m-0 self-center" color="link">
-      <a className="text-[#333]" href="#">Events</a>
-      </div>
-      <div className="left m-0 self-center" color="link">
-        <a className="text-[#333]" href="#">Boards & Committees</a>
-      </div>
-    </ul>
-    </div>
-    {/* right */}
-    <div className="flex-row bg-white right-menu p-4">
-    <div className="flex flex-wrap">
-    <div className="flex ">
-      <div className="m-0 w-[236px]">
-        <div>
-          <span className="menu-span">DATA &amp; RESEARCH</span>
+        <div className="flex desktop-menu">
+          {/* left */}
+          <div className="menu bg-[#f3f6f9] px-15">
+            <ul className="left-menu shadow-3 py-7 flex flex-col w-200 p-30 md:p-[40px] h-[260px] justify-between">
+              <div
+                className="border-b border-solid border-gray-300 pb-3 left m-0 self-center"
+                color="link"
+              >
+                <a className="text-[#333]" href="#">
+                  Home
+                </a>
+              </div>
+              <div
+                className="border-b border-solid border-gray-300 pb-3 left m-0 self-center"
+                color="link"
+              >
+                <a className="text-[#333]" href="#">
+                  About Us
+                </a>
+              </div>
+              <div
+                className="border-b border-solid border-gray-300 pb-3 left m-0 self-center"
+                color="link"
+              >
+                <a className="text-[#333]" href="#">
+                  Events
+                </a>
+              </div>
+              <div className="left m-0 self-center" color="link">
+                <a className="text-[#333]" href="#">
+                  Boards & Committees
+                </a>
+              </div>
+            </ul>
+          </div>
+          {/* right */}
+          <div className="flex-row bg-white right-menu p-4">
+            <div className="flex flex-wrap">
+              <div className="flex ">
+                <div className="m-0 w-[236px]">
+                  <div>
+                    <span className="menu-span">DATA &amp; RESEARCH</span>
+                  </div>
+                  <ul className="mt-2 pl-0">
+                    <li>
+                      <a href="#">Education</a>
+                    </li>
+                    <li>
+                      <a href="#">Healthcare</a>
+                    </li>
+                    <li>
+                      <a href="#">Local Government</a>
+                    </li>
+                    <li>
+                      <a href="#">Population &amp; Demographics</a>
+                    </li>
+                    <li>
+                      <a href="#">Presentations</a>
+                    </li>
+                    <li>
+                      <a href="#">State Finances and Economy</a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        Inflation Adjustments for Legal Proceedings
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="flex">
+                <div className="m-0 w-[236px]">
+                  <div>
+                    <span className="menu-span">GEOGRAPHY &amp; MAPPING</span>
+                  </div>
+                  <ul className="mt-2 pl-0">
+                    <li>
+                      <a href="#">Analytic Mapping Services</a>
+                    </li>
+                    <li>
+                      <a href="#">County Boundary Program</a>
+                    </li>
+                    <li>
+                      <a href="#">Jurisdictional Mapping</a>
+                    </li>
+                    <li>
+                      <a href="#">NC/SC Boundary</a>
+                    </li>
+                    <li>
+                      <a href="#">SC Real Time Network (RTN)</a>
+                    </li>
+                    <li>
+                      <a href="#">Statewide Aerial Imagery</a>
+                    </li>
+                    <li>
+                      <a href="#">Transportation Network Carrier Maps</a>
+                    </li>
+                    <li>
+                      <a href="#">LocateMe</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="flex">
+                <div className="m-0 w-[236px] ">
+                  <div>
+                    <span className="menu-span">PROGRAMS & SERVICES</span>
+                  </div>
+                  <ul className="mt-2 pl-0">
+                    <li>
+                      <a href="#">Data Services &amp; Online Solutions</a>
+                    </li>
+                    <li>
+                      <a href="#">Fiscal Analysis</a>
+                    </li>
+                    <li>
+                      <a href="#">Geodetic Survey</a>
+                    </li>
+                    <li>
+                      <a href="#">Precinct Demographics &amp; Redistricting</a>
+                    </li>
+                    <li>
+                      <a href="#">State 9-1-1 Program</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="flex">
+                <div className="m-0 w-[236px] ">
+                  <div>
+                    <span className="menu-span">
+                      LEGISLATIVE FISCAL IMPACTS
+                    </span>
+                  </div>
+                  <ul className="mt-2 pl-0">
+                    <li>
+                      <a href="#">Current General Assembly Session</a>
+                    </li>
+                    <li>
+                      <a href="#">Previous General Assembly Session</a>
+                    </li>
+                    <li>
+                      <a href="#">Forms</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <ul className="mt-2 pl-0">
-          <li><a href="#">Education</a></li>
-          <li><a href="#">Healthcare</a></li>
-          <li><a href="#">Local Government</a></li>
-          <li><a href="#">Population &amp; Demographics</a></li>
-          <li><a href="#">Presentations</a></li>
-          <li><a href="#">State Finances and Economy</a></li>
-          <li><a href="#">Inflation Adjustments for Legal Proceedings</a></li>
-        </ul>
-      </div>
-    </div>
-    <div className="flex">
-      <div className="m-0 w-[236px]">
-        <div>
-          <span className="menu-span">GEOGRAPHY &amp; MAPPING</span>
+
+        <div className="lg:hidden">
+          <NavBarMobile />
         </div>
-        <ul className="mt-2 pl-0">
-          <li><a href="#">Analytic Mapping Services</a></li>
-          <li><a href="#">County Boundary Program</a></li>
-          <li><a href="#">Jurisdictional Mapping</a></li>
-          <li><a href="#">NC/SC Boundary</a></li>
-          <li><a href="#">SC Real Time Network (RTN)</a></li>
-          <li><a href="#">Statewide Aerial Imagery</a></li>
-          <li><a href="#">Transportation Network Carrier Maps</a></li>
-          <li><a href="#">LocateMe</a></li>
-        </ul>
-      </div>
-    </div>
-    <div className="flex">
-    <div className="m-0 w-[236px] ">
-        <div>
-          <span className="menu-span">PROGRAMS & SERVICES</span>
-        </div>
-        <ul className="mt-2 pl-0">
-          <li><a href="#">Data Services &amp; Online Solutions</a></li>
-          <li><a href="#">Fiscal Analysis</a></li>
-          <li><a href="#">Geodetic Survey</a></li>
-          <li><a href="#">Precinct Demographics &amp; Redistricting</a></li>
-          <li><a href="#">State 9-1-1 Program</a></li>
-        </ul>
-      </div>
-    </div>
-    <div className="flex">
-    <div className="m-0 w-[236px] ">
-        <div>
-          <span className="menu-span">LEGISLATIVE FISCAL IMPACTS</span>
-        </div>
-        <ul className="mt-2 pl-0">
-          <li><a href="#">Current General Assembly Session</a></li>
-          <li><a href="#">Previous General Assembly Session</a></li>
-          <li><a href="#">Forms</a></li>
-        </ul>
-      </div>
-    </div>
-    </div>
-    </div>
-      </div>
 
-      <div className="lg:hidden">
-      <NavBarMobile />
-      </div>
-
-
-
-
-  <div className="border">
-    </div>
-</MDBCollapse>
+        <div className="border"></div>
+      </MDBCollapse>
     </>
   );
 }
+
+const SearchBox = () => {
+  const [isDropDownVisible, setIsDropDownVisible] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsDropDownVisible(!isDropDownVisible);
+  };
+
+  return (
+    <MDBContainer>
+      <div className="relative">
+        <button
+          onClick={handleButtonClick}
+          className="p-[.75rem] lg:border-[1px] border-solid border-[#3068ad] rounded-sm  mr-4"
+        >
+          <HiMagnifyingGlass
+            size={24}
+            strokeWidth={2}
+            className="custom-icon"
+          />
+        </button>
+        {isDropDownVisible && (
+          <div className="absolute top-12 left-0 bg-white border border-gray-300 rounded-lg shadow-lg z-10 ml-[-323px] w-[375px] h-[75px]">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="w-full px-4 py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+            />
+          </div>
+        )}
+      </div>
+    </MDBContainer>
+  );
+};

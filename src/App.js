@@ -1,11 +1,12 @@
 import NavBar from "./Components/NavBar/NavBar";
 import Hero from "./Components/Hero/Hero";
 import Cards from "./Components/Cards/Cards";
-import Divider from './Components/Divider/Divider'
+import Divider from "./Components/Divider/Divider";
+import ServicesLinks from "./Components/ServicesLinks/ServicesLinks";
 
 // styles //
+import "./styles/index.css";
 import "./styles/global-styles.css";
-import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -18,6 +19,7 @@ function App() {
       <Divider />
       <Hero />
       <Cards />
+      <ServicesLinks />
     </div>
   );
 }

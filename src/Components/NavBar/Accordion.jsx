@@ -25,7 +25,11 @@ function Accordion({ title, children }) {
           </div>
         </button>
       </div>
-      {isAccordionOpen && <div className="py-4" id="accordion-panel-1">{children}</div>}
+      {isAccordionOpen && (
+        <div className="py-4" id="accordion-panel-1">
+          {children}
+        </div>
+      )}
     </div>
   );
 }
