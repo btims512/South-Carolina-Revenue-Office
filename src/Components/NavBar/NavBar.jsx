@@ -293,7 +293,7 @@ const SearchBox = () => {
       <div className="relative">
         <button
           onClick={handleButtonClick}
-          className="p-[.75rem] lg:border-[1px] border-solid border-[#3068ad] rounded-sm  mr-4"
+          className="p-[.75rem] lg:border-[1px] border-solid border-[#3068ad] bg-[#3068ad] rounded-sm  mr-4"
         >
           <HiMagnifyingGlass
             size={24}
@@ -302,13 +302,44 @@ const SearchBox = () => {
           />
         </button>
         {isDropDownVisible && (
-          <div className="absolute top-12 left-0 bg-white border border-gray-300 rounded-lg shadow-lg z-10 ml-[-323px] w-[375px] h-[75px]">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full px-4 py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
-            />
-          </div>
+          <form
+            action="/search"
+            method="get"
+            acceptCharset="UTF-8"
+            className="flex ml-[-496px] p-2 bg-[#3068ad]"
+          >
+            <div className="form-item form-group self-start mr-2">
+              <input
+                className="block w-full py-1 px-2 text-base font-normal leading-1.5 h-10 mt-1"
+                id="search"
+                placeholder="Search rfa.sc.gov"
+                type="text"
+                name="name"
+                required
+                minlength="4"
+                maxlength="8"
+                size="10"
+              ></input>
+            </div>
+            <div className="form-actions border">
+              <button
+                type="submit"
+                id="search-button"
+                value="Search"
+                className="solid-icon-btn mt-1 h-[41px] w-[136px]"
+              >
+                <span className="submit-text flex gap-2">
+                  Search
+                  <HiMagnifyingGlass
+                    size={16}
+                    strokeWidth={2.5}
+                    color="white"
+                  />
+                </span>
+                <span className="submit-icon"></span>
+              </button>
+            </div>
+          </form>
         )}
       </div>
     </MDBContainer>
