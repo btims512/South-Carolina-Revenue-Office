@@ -2,7 +2,7 @@ import React from "react";
 
 export const Divider = () => {
   return (
-    <div className="md:border-b-8 border-b-4 border-solid border-[#1b3a61]"></div>
+    <div className="md:border-b-8 border-b-4 border-solid border-[#1b3a61] mt-[]"></div>
   );
 };
 

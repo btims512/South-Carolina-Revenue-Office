@@ -4,7 +4,6 @@ import {
   MDBCollapse,
   MDBNavbar,
   MDBNavbarToggler,
-  MDBBtn,
 } from "mdb-react-ui-kit";
 import NavBarMobile from "./NavBarMobile";
 import logo from "../../images/logo.png";
@@ -54,11 +53,17 @@ const MenuIcon = ({ isOpen }) => (
 
 export default function NavBar() {
   const [showNavExternal, setShowNavExternal] = useState(false);
-  const isDisabled = true;
 
   return (
     <>
-      <MDBNavbar>
+      <MDBNavbar
+        style={{
+          width: "100%",
+          position: "fixed",
+          backgroundColor: "white",
+          marginBottom: "20px",
+        }}
+      >
         <MDBContainer
           fluid
           className="MDBcontainer hidden sm:mt-[-10px] mt-[-8px] "
@@ -106,7 +111,7 @@ export default function NavBar() {
             </div>
           </div>
         </MDBContainer>
-        <div className="w-fit-content hidden md:ml-[-90px] md:mt-[15px] md:block">
+        <div className="w-fit-content hidden md:ml-[-83px] md:mt-[15px] md:block">
           {/* <MDBContainer>
             <div className="p-[.75rem] lg:border-[1px] border-solid border-[#3068ad] rounded-sm  mr-4">
               <HiMagnifyingGlass
@@ -119,11 +124,11 @@ export default function NavBar() {
           <SearchBox />
         </div>
       </MDBNavbar>
-      <MDBCollapse show={showNavExternal} className="">
+      <MDBCollapse show={showNavExternal} className="h-auto">
         <div className="flex desktop-menu">
           {/* left */}
           <div className="menu bg-[#f3f6f9] px-15">
-            <ul className="left-menu shadow-3 py-7 flex flex-col w-200 p-30 md:p-[40px] h-[260px] justify-between">
+            <ul className="left-menu shadow-3 py-7 flex flex-col w-200 p-30 md:p-[40px] h-[260px] justify-between mt-[30px]">
               <div
                 className="border-b border-solid border-gray-300 pb-3 left m-0 self-center"
                 color="link"
@@ -270,11 +275,9 @@ export default function NavBar() {
             </div>
           </div>
         </div>
-
         <div className="lg:hidden">
           <NavBarMobile />
         </div>
-
         <div className="border"></div>
       </MDBCollapse>
     </>
@@ -289,7 +292,7 @@ const SearchBox = () => {
   };
 
   return (
-    <MDBContainer>
+    <MDBContainer style={{ width: "85%" }}>
       <div className="relative">
         <button
           onClick={handleButtonClick}
