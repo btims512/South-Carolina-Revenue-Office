@@ -90,7 +90,11 @@ export default function NavBar() {
             <div id="navbar-info" className="navbar-text gap-3 ml-5 pr-[15px]">
               <div>
                 <a href="/">
-                  <img className="w-[40px] md:w-[78px]" src={logo} alt="logo" />
+                  <img
+                    className="w-[40px] md:w-[78px]"
+                    src={logo}
+                    alt="South Carolina State seal"
+                  />
                 </a>
               </div>
               <div className="">
@@ -101,33 +105,17 @@ export default function NavBar() {
                   Transforming data into solutions for South Carolina
                 </div>
               </div>
-              {/* <div className="flex">
-            <ul className="flex"> 
-              <li>About Us</li>
-              <li>Events</li>
-              <li>Boards & Committees</li>
-            </ul>
-            </div> */}
             </div>
           </div>
         </MDBContainer>
         <div className="w-fit-content hidden md:ml-[-83px] md:mt-[15px] md:block">
-          {/* <MDBContainer>
-            <div className="p-[.75rem] lg:border-[1px] border-solid border-[#3068ad] rounded-sm  mr-4">
-              <HiMagnifyingGlass
-                size={24}
-                strokeWidth={2}
-                className="custom-icon"
-              />
-            </div>
-          </MDBContainer> */}
           <SearchBox />
         </div>
       </MDBNavbar>
       <MDBCollapse show={showNavExternal} className="h-auto">
         <div className="flex desktop-menu">
           {/* left */}
-          <div className="menu bg-[#f3f6f9] px-15">
+          <div className="menu bg-[#f3f6f9] px-15 mt-[57px]">
             <ul className="left-menu shadow-3 py-7 flex flex-col w-200 p-30 md:p-[40px] h-[260px] justify-between mt-[30px]">
               <div
                 className="border-b border-solid border-gray-300 pb-3 left m-0 self-center"
@@ -161,7 +149,7 @@ export default function NavBar() {
             </ul>
           </div>
           {/* right */}
-          <div className="flex-row bg-white right-menu p-4">
+          <div className="flex-row bg-white right-menu p-4 mt-[110px]">
             <div className="flex flex-wrap">
               <div className="flex ">
                 <div className="m-0 w-[236px]">
@@ -296,7 +284,7 @@ const SearchBox = () => {
       <div className="relative">
         <button
           onClick={handleButtonClick}
-          className="p-[.75rem] lg:border-[1px] border-solid border-[#3068ad] bg-[#3068ad] rounded-sm  mr-4"
+          className="p-[.75rem] lg:border-[1px] border-solid border-[#3068ad] bg-[#3068ad] rounded-sm  mr-[13px]"
         >
           <HiMagnifyingGlass
             size={24}
@@ -329,7 +317,7 @@ const SearchBox = () => {
                 type="submit"
                 id="search-button"
                 value="Search"
-                className="solid-icon-btn mt-1 h-[41px] w-[136px]"
+                className="solid-icon-btn h-[41px] w-[120px]"
               >
                 <span className="submit-text flex gap-2">
                   Search

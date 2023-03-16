@@ -3,6 +3,7 @@ import Hero from "./Components/Hero/Hero";
 import Cards from "./Components/Cards/Cards";
 import Divider from "./Components/Divider/Divider";
 import ServicesLinks from "./Components/ServicesLinks/ServicesLinks";
+import Footer from "./Components/Footer/Footer";
 
 // styles //
 import "./styles/index.css";
@@ -20,6 +21,7 @@ function App() {
       <Hero />
       <Cards />
       <ServicesLinks />
+      <Footer />
     </div>
   );
 }

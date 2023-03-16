@@ -23,6 +23,9 @@ function Accordion({ title, children }) {
           <div className="flex justify-center items-center w-12 h-12 fill-[#fff] bg-[#3068ad] border-none">
             <ChevronDownIcon className="w-8 fill-[#fff] " />
           </div>
+          <span className="sr-only">
+            {isAccordionOpen ? "Hide content" : "Show content"}
+          </span>
         </button>
       </div>
       {isAccordionOpen && (

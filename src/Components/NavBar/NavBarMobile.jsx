@@ -5,7 +5,7 @@ function MyComponent() {
     <>
       <div className="main">
         <div className="flex md:flex-row justify-between flex-col">
-          <ul className="left-menu bg-[#f3f6f9] shadow-3 flex flex-col w-200 p-30 h-[260px] justify-between w-screen pl-2">
+          <ul className="left-menu bg-[#f3f6f9] shadow-3 flex flex-col w-200 p-30 h-[260px] justify-between w-screen pl-2 md:mt-[80px] sm:mt-[30px] mt-[25px]">
             <li className="border-b border-solid border-gray-300 pt-[32.8px] sm:pl-0 md:pl-0">
               <a
                 className="text-[#333] text-[15px] md:text-[16px] font-bold"
@@ -40,7 +40,7 @@ function MyComponent() {
             </li>
           </ul>
 
-          <div className="w-screen lg:flex lg:flex-row">
+          <div className="w-screen lg:flex lg:flex-row md:mt-[80px]">
             <Accordion title="DATA & RESEARCH">
               <div className="m-0 w-[236px]">
                 <ul className="mt-2 pl-0">
