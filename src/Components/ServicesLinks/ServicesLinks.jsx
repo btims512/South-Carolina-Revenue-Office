@@ -4,7 +4,7 @@ import { Divider, Divider2 } from "../Divider/Divider";
 const ServicesLinks = () => {
   return (
     <div>
-      <div>
+      <div className="max-w-7xl mx-auto">
         <div className="pl-24 pr-24 pt-8 pb-8">
           <div className="text-[22px] md:text-[28px] text-[#1b3a61] text-left font-bold">
             Popular Services & Links
