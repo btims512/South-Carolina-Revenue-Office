@@ -264,7 +264,7 @@ export default function NavBar() {
           </div>
         </div>
         <div className="lg:hidden">
-          <NavBarMobile />
+          <NavBarMobile style={{ zInex: "-1" }} />
         </div>
         <div className="border"></div>
       </MDBCollapse>

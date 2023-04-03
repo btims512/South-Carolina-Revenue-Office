@@ -47,7 +47,7 @@ const ServicesLinks = () => {
           </div>
 
           <div>
-            <div className="section-x2 flex justify-between gap-[40px]">
+            <div className="section-x2 flex sm:justify-between justify-center gap-[40px]">
               {/* 1 */}
               <div className="section-1 w-[300px]">
                 <div className="pt-16 text-[16px] md:text-[22px] text-[#1b3a61] text-left font-bold">
